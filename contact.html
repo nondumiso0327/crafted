@@ -12,13 +12,14 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       rel="stylesheet" />
   </head>
+
   <body>
     <header>
       <div class="nav-contact">
         <a href="index.html" class="logo-contact">Back to Home Page</a>
       </div>
     </header>
- 
+
     <main class="contact-container">
       <aside class="contact-info">
         <h2>Let’s Connect</h2>
@@ -33,7 +34,12 @@
       </aside>
 
       <section class="contact-form">
-        <form id="craftedForm">
+        <form name="craftedForm" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="craftedForm" />
+          <div hidden>
+            <input name="bot-field" />
+          </div>
+
           <div class="form-row">
             <label for="name">Full Name *</label>
             <input type="text" id="name" name="name" required />
@@ -95,11 +101,15 @@
 
           <button type="submit" class="btn-submit">Submit Message</button>
         </form>
+
         <div id="toast" class="toast hidden">
           Thank you! Your message has been sent 🎉
         </div>
       </section>
     </main>
+  </body>
+</html>
+
     <!-- Firebase SDKs -->
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
