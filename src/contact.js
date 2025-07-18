@@ -1,6 +1,6 @@
 
  document.getElementById("craftedForm").addEventListener("submit", function (e) {
-   e.preventDefault();
+  
   // Show success toast (optional)
   const toast = document.getElementById("toast");
   toast.classList.remove("hidden");
