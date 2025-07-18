@@ -290,7 +290,6 @@ p {
 
 /*styling the contact page*/
 
-/* Reset some default styles */
 body,
 h1,
 h2,
@@ -301,6 +300,11 @@ form {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav-contact {
@@ -404,4 +408,67 @@ input[type="checkbox"] {
 
 .hidden {
   display: none;
+}
+/* Responsive styles for mobile screens */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .contact-info {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .contact-info h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .contact-info p,
+  .contact-info ul {
+    text-align: center;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .form-row {
+    margin-bottom: 1rem;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .btn-submit {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .toast {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+
+  .nav-contact {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .logo-contact {
+    font-size: 1.2rem;
+  }
 }
